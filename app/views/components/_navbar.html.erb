@@ -1,0 +1,15 @@
+<div class="navbar-wagon navbar-fixed-top">
+  <!-- Logo -->
+  <!-- <div> -->
+  <%= link_to root_path, class:"navbar-wagon-title", id:"logo-link" do %>
+    <%= image_tag 'booze_icon.svg', class:"navbar-wagon-brand" %><h1>The Cellar</h1>
+  <% end %>
+  <!-- </div> -->
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right">
+    <%= link_to new_cocktail_path, class:"navbar-wagon-item navbar-wagon-link" do %>
+      Add Cocktail <i class="far fa-plus-square"></i>
+    <% end %>
+  </div>
+</div>

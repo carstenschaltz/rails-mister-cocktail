@@ -2,6 +2,7 @@
   <h1><%= @cocktail.name %></h1>
   <%= link_to "Back to list", root_path %><br>
   <%= link_to "Add dose", new_cocktail_dose_path(@cocktail) %>
+  <%= cl_image_tag @cocktail.photo %>
   <h2>Recipe</h2>
   <ul>
     <% @cocktail.doses.each do |dose| %>
