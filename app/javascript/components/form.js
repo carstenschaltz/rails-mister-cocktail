@@ -3,9 +3,9 @@ import swal from 'sweetalert';
 function deleteAlert() {
 
 
-  const submitBtn = document.querySelector("#delete-button")
-  if (submitBtn) {
-    submitBtn.addEventListener('click', (event) => {
+  const submitBtn = document.querySelectorAll("#delete-button")
+  submitBtn.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
       event.preventDefault();
       console.log("click")
       swal({
@@ -23,7 +23,7 @@ function deleteAlert() {
         }
       });
     });
-  }
+  });
 };
 
 export { deleteAlert };
