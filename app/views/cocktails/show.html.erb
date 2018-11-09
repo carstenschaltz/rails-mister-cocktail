@@ -1,0 +1,15 @@
+<div class="container">
+  <h1><%= @cocktail.name %></h1>
+  <%= link_to "Back to list", root_path %><br>
+  <%= link_to "Add dose", new_cocktail_dose_path(@cocktail) %>
+  <h2>Recipe</h2>
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.ingredient.name %>: <%= dose.description %> <%= link_to "Delete", dose_path(dose), method: :delete, id: "delete-btn", class: 'hidden' %>
+        <button class="btn btn-danger" id="delete-button">Delete</button>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<!-- <span id="delete-btn">Delete</span> -->
